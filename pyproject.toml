@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-reddit-explorer"
+version = "0.1.0"
+description = "A comprehensive Reddit exploration plugin for Hermes Agent."
+authors = [{name = "Dawid Szewc"}]
+dependencies = [
+    "requests"
+]
+
+[project.entry-points."hermes_agent.plugins"]
+reddit_tool = "reddit_tool.main:register"
